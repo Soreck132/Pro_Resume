@@ -1,0 +1,7 @@
+
+
+--.gitignore file will ignore files from the project 
+
+ANYTHING PUT IT INTO .gitignore WILL BE IGNORED FOLLOWING THE BELOW DESCRIPTION
+
+ Luckily we can handle this using a special file called .gitignore. This file needs to be in the root of your project. It's just a plain text file named .gitignore, and Git automatically understands that anything listed inside it should be ignored. You can specify files directly, entire folders, or even use wildcard slice asterisk for more flexibility. 
