@@ -9,10 +9,10 @@
     --text-muted: #737f8d;
 
     --accent: #63e6be;
-    --accent-dark: #31b891
+    --accent-dark: #31b891;
 
     --border: rgba(255, 255, 255, 0.09);
-    --border-accent: rgba(99, 230, 190, 035);
+    --border-accent: rgba(99, 230, 190, 0.35);
 
     --max-width: 1180px;
 
@@ -43,7 +43,7 @@ body::before{
     pointer-events: none;
     background: 
         radial-gradient(
-            circle at 75% 10%
+            circle at 75% 10%,
             rgba(99, 230, 190, 0.07)
             transparent 30%
         );
@@ -71,15 +71,15 @@ a{
 .section{
     padding: 120px 0;
 }
-.section-heading{
+.section-heading {
     max-width: 760px;
     margin-bottom: 65px;
 }
 .section-heading h2,
-.education-section h2{
-    font-size: clamp (2.1rem, 4vw, 3.6rem);
+.education-section h2 {
+    font-size: clamp(2.1rem, 4vw, 3.6rem);
     line-height: 1.1;
-    letter-spacing: -0.45em;
+    letter-spacing: -0.045em;
 }
 .section-heading h2 span,
 .education-section h2 span,
@@ -99,7 +99,7 @@ a{
 
     border-bottom: 1px solid var(--border);
 }
-.nav.container{
+.nav-container{
     min-height: 76px;
 
     display: flex;
@@ -142,7 +142,7 @@ a{
     font-weight: 700;
 
     transition: 
-        bacground var(--transition),
+        background var(--transition),
         color var(--transition);
 }
 .nav-resume:hover{
@@ -153,7 +153,7 @@ a{
 /*HERO*/
 
 .hero{
-    min-height: calc(100vh-76px);
+    min-height: calc(100vh - 76px);
 
     display: flex;
     align-items: center;
@@ -189,7 +189,7 @@ a{
     border-radius: 50%;
     background: var(--accent);
     box-shadow: 
-        0 0 0 5px rgba(99, 230, 190, 8.08);
+        0 0 0 5px rgba(99, 230, 190, 0.08);
 }
 .hero h1{
     font-size: clamp(4rem, 9vw, 7.5rem);
@@ -221,8 +221,8 @@ a{
     gap: 8px;
 }
 .hero-tags span,
-.hero-tags span,
-.hero-tags span {
+.skill-tags span,
+.stack-list span {
     display: inline-block;
     padding: 6px 10px;
     border: 1px solid var(--border);
@@ -247,10 +247,11 @@ a{
     font-size: 0.82rem;
     font-weight: 700;
     transition: 
-        transform var(--transition);
-        background: var(--transition);
-        color: var(--transition);
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition);
 }
+
 .btn:hover{
     transform: translateY(-2px);
 
@@ -290,7 +291,7 @@ a{
     background: 
         linear-gradient(
             145deg,
-            rgba(99, 230, 190, 0.08)
+            rgba(99, 230, 190, 0.08),
             rgba(255, 255, 255, 0.015)
         );
     border: 1px solid var(--border);
@@ -300,19 +301,20 @@ a{
     transition: transform var(--transition);    
 }
 .hero-card:hover{
-    transform: rotate(odeg) translateY(-5px);
+    transform: rotate(0deg) translateY(-5px);
 }
 .profile-frame{
     aspect-ratio: 1 / 1;
     border-radius: 16px;
     background: 
         radial-gradient(
-            circle at 50% 35%
+            circle at 50% 35%,
             rgba(99, 230, 190, 0.2),
             transparent 28%
         ), #0a0f15;
     display: grid;
     place-items: center;    
+    padding: 18px;
 }
 .profile-placeholder {
     width: 150px;
@@ -325,6 +327,15 @@ a{
     font-size: 3rem;
     font-weight: 800;
     background: rgba(99, 230, 190, 0.04);
+}
+.img{
+    width: 225%;
+    height: 105%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    transform: translateY(-86px);
 }
 .hero-card-content{
     padding: 28px 12px 15px;
@@ -434,7 +445,7 @@ a{
     margin-bottom: 13px;
 }
 .skill-card p{
-    color: var(--text-mutes);
+    color: var(--text-muted);
     font-size: 0.86rem;
     margin-bottom: 24px;
 }
@@ -697,6 +708,13 @@ footer{
     .stack-grid {
             grid-template-columns: repeat(2, 1fr);
     }
+       
+    .img {
+        width: 135%;
+        height: 100%;
+        transform: translateY(-25px);
+            }
+        
 }
 @media (max-width: 760px) {
     .container{
